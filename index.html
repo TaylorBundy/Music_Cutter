@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
     <title>Cortar Música</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -10,19 +11,38 @@
       <div class="cortar_musica">
         <h2>Cortar Música</h2>
 
-        <input type="file" id="file" />
+        <div class="agregar_archivo">
+          <img class="imgBtn" src="images/agregar.avif" />
+          <input type="file" id="file" />
+        </div>
 
         <label>Inicio (segundos)</label>
-        <input type="number" id="start" />
+        <input
+          type="number"
+          id="start"
+          data-title="Ingrese los segundos iniciales para cortrar:"
+        />
 
         <label>Fin (segundos)</label>
-        <input type="number" id="end" />
+        <input
+          type="number"
+          id="end"
+          data-title="Ingrese los segundos finales para cortar:"
+        />
 
         <label>Fade In (segundos)</label>
-        <input type="number" id="fadeIn" />
+        <input
+          type="number"
+          id="fadeIn"
+          data-title="Ingrese los segundos iniciales para agregar efecto:"
+        />
 
         <label>Fade Out (segundos)</label>
-        <input type="number" id="fadeOut" />
+        <input
+          type="number"
+          id="fadeOut"
+          data-title="Ingrese los segundos finales para agregar efecto:"
+        />
         <div class="formato_descarga">
           <label>Formato de descarga</label>
           <select id="format">
@@ -33,7 +53,10 @@
           </select>
         </div>
 
-        <button onclick="procesar()">Procesar</button>
+        <button onclick="procesar()">
+          <img class="imgBtn" src="images/cortar.avif" />
+          Procesar
+        </button>
 
         <br /><br />
 
@@ -42,9 +65,15 @@
       <div class="convertir_musica">
         <h2>Convertir WAV a MP3</h2>
 
-        <input type="file" id="fileInput" accept=".wav" />
+        <div class="agregar_archivo">
+          <img class="imgBtn" src="images/agregar.avif" />
+          <input type="file" id="fileInput" accept=".wav" />
+        </div>
 
-        <button id="convertBtn">Convertir</button>
+        <button id="convertBtn">
+          <img class="imgBtn" src="images/mp3.avif" />
+          Convertir
+        </button>
 
         <a id="downloadLink" style="display: none">Descargar MP3</a>
 

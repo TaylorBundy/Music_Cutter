@@ -2,8 +2,8 @@ async function procesar() {
   const file = document.getElementById("file").files[0];
   if (!file) return alert("Cargá un audio");
 
-  const start = Number(document.getElementById("start").value);
-  const end = Number(document.getElementById("end").value);
+  let start = Number(document.getElementById("start").value);
+  let end = Number(document.getElementById("end").value);
   const fadeIn = Number(document.getElementById("fadeIn").value);
   const fadeOut = Number(document.getElementById("fadeOut").value);
   const format = document.getElementById("format").value;
@@ -12,6 +12,17 @@ async function procesar() {
 
   const arrayBuffer = await file.arrayBuffer();
   const audioBuffer = await ctx.decodeAudioData(arrayBuffer);
+  const duration = audioBuffer.duration;
+
+  // valores automáticos
+  if (!start) {
+    start = 0;
+    document.getElementById("start").value = start;
+  }
+  if (!end) {
+    end = duration;
+    document.getElementById("end").value = end;
+  }
 
   const sampleRate = audioBuffer.sampleRate;
 
@@ -109,3 +120,17 @@ function bufferToWave(abuffer) {
 
   return buffer;
 }
+
+function activarTitulos() {
+  document.addEventListener("mousemove", (e) => {
+    const el = e.target.closest("[data-title],[title]");
+
+    if (!el) return;
+
+    if (el.dataset.title) {
+      el.title = el.dataset.title;
+    }
+  });
+}
+
+activarTitulos();
