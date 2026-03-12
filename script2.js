@@ -1,4 +1,4 @@
-const fileInput = document.getElementById("fileInput");
+const fileInput = document.getElementById("file");
 const convertBtn = document.getElementById("convertBtn");
 const downloadLink = document.getElementById("downloadLink");
 const statusText = document.getElementById("status");
