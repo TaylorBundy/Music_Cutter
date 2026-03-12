@@ -113,7 +113,7 @@ a {
     gap: 10px;
     width: 80%;
     justify-content: unset;
-    font-size: 2em;
+    /* font-size: 2em; */
   }
 
   .cortar_musica,
@@ -121,12 +121,12 @@ a {
     width: 100%;
   }
 
-  h2 {
+  /* h2 {
     font-size: 2em;
-  }
+  } */
 
   button {
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     width: 60%;
   }
 
@@ -144,7 +144,7 @@ a {
     background-position-x: 5px;
   }
 
-  input {
+  /* input {
     font-size: 1em;
-  }
+  } */
 }
