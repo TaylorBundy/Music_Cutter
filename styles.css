@@ -16,6 +16,7 @@ body {
   text-align: center;
   display: flex;
   justify-content: space-evenly;
+  gap: 10px;
 }
 
 input {
@@ -46,6 +47,20 @@ button:hover {
 .imgBtn {
   width: 16px;
   margin-right: 5px;
+}
+
+.procesar {
+  background: #09f url("images/cortar.avif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 5px;
+}
+
+.convertir {
+  background: #09f url("images/mp3.avif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 5px;
 }
 
 a {
@@ -82,13 +97,46 @@ a {
 }
 
 .agregar_archivo {
+  width: 90%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5px;
+  /* background: #111 url("images/agregar.avif"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: 8%; */
+  /* background-size: contain; */
+  /* background-position-x: 5px; */
+  /* background-position: left; */
 }
 
 .agregar_archivo input {
   margin: 0;
+}
+
+.file-btn input {
+  display: none;
+}
+
+.file-btn {
+  /* background: #09f; */
+  background: #09f url("images/agregar.avif");
+  background-repeat: no-repeat;
+  background-size: 10%;
+  /* background-size: contain; */
+  /* background-position-x: 5px; */
+  background-position: left;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#nombreArchivo,
+#nombreArchivo1 {
+  margin: 5px;
 }
 
 @keyframes neon {

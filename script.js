@@ -134,3 +134,26 @@ function activarTitulos() {
 }
 
 activarTitulos();
+
+// const fileInput =
+//   document.getElementById("file") || document.getElementById("file1");
+// const nombre =
+//   document.getElementById("nombreArchivo") ||
+//   document.getElementById("nombreArchivo1");
+
+// fileInput.addEventListener("change", () => {
+//   if (fileInput.files.length > 0) {
+//     nombre.textContent = fileInput.files[0].name;
+//   }
+// });
+
+document.querySelectorAll("#file").forEach((input) => {
+  input.addEventListener("change", function () {
+    const box = this.closest(".agregar_archivo");
+    const name = box.querySelector("#nombreArchivo");
+
+    if (this.files.length > 0) {
+      name.textContent = this.files[0].name;
+    }
+  });
+});
