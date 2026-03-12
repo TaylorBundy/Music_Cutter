@@ -100,7 +100,7 @@ a {
   }
 }
 
-@media screen and (min-width: 360px) and (max-width: 1154px) {
+@media screen and (max-width: 1154px) {
   body {
     width: 90%;
     margin: auto;
@@ -109,8 +109,14 @@ a {
   }
 
   .card {
-    display: flex;
+    display: grid;
     gap: 10px;
     width: 80%;
+    justify-content: unset;
+  }
+
+  .cortar_musica,
+  .convertir_musica {
+    width: 100%;
   }
 }
