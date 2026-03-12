@@ -99,3 +99,18 @@ a {
     background-position: 200%;
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 1154px) {
+  body {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    height: unset;
+  }
+
+  .card {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+  }
+}
